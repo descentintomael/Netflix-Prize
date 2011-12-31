@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Netflix Prize Dataset Playground
+-------------------------------------------------------------------------------
+Version 0.001
+Release date: 31/12/11
+-------------------------------------------------------------------------------
+Project state:
+prototype
+-------------------------------------------------------------------------------
+Credits
+	Sean M Todd (iphone.reply@gmail.com)
+-------------------------------------------------------------------------------
+Project description
+
+This project is solely for my own benefit to explore different algorithms 
+on a large dataset and to get a better feel for NoSQL databases.
+-------------------------------------------------------------------------------
+Dependencies:
+
+* Cassandra >= 1.05
+* Java >= 1.6
+* Ant
+
+-------------------------------------------------------------------------------
+Documentation
+
+TBD when I have more code in place.
+-------------------------------------------------------------------------------
+Installation instructions
+
+None so far.
+-------------------------------------------------------------------------------
+Additional Notes
+
+Feel free to contact me if you want more info on what I'm trying to 
+achieve or have any insights that might help.
