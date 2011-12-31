@@ -1,0 +1,35 @@
+<project name="Netflix-Prize" default="dist" basedir="..">
+
+	<description>
+        Netflix-Prize build file
+    </description>
+
+	<property file="build/build.properties" />
+	<property name="name" value="Netflix-Prize" />
+	<property name="source" location="source/" />
+	<property name="resource" location="resource" />
+	<property name="build" value="${tmp.dir}/${name}" />
+	<property name="dist" location="../jboss-4.0.5.GA/server/default/deploy" />
+
+	<target name="init">
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${source}" destdir="${build}">
+			<classpath>
+				<pathelement path="../jboss-4.0.5.GA/client/jboss-j2ee.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="prepare-ejb-jar">
+		<copy todir="${build}">
+			<fileset dir="${resource}/${name}Bean-jar" />
+		</copy>
+	</target>
+	
+	<target name="dist" depends="compile, prepare-ejb-jar">
+		<jar jarfile="${dist}/${name}.jar" basedir="${build}"/>
+	</target>
+</project>
